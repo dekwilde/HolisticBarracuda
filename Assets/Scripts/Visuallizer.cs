@@ -74,6 +74,13 @@ public class Visuallizer : MonoBehaviour
     }
 
     void PoseRender(){
+
+        for(int i = 0; i < holisticPipeline.poseVertexCount + 1; i++){
+
+            Debug.LogFormat("{0}: {1}", i, holisticPipeline.GetPoseWorldLandmark(i));
+        }
+
+
         var w = image.rectTransform.rect.width;
         var h = image.rectTransform.rect.height;
 
